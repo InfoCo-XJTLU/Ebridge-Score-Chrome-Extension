@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "EbridgeScore",
+  "version": "1.0.0",
+  "action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "24": "images/icon24.png",
+      "32": "images/icon32.png"
+    }
+  },
+
+  "description": "A plain text description",
+  "icons": {
+  },
+  "author": "XJTLU InfoCo Club",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://ebridge.xjtlu.edu.cn/*"
+      ],
+      "js": [
+        "ebridge-score.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "update_url": "https://path/to/updateInfo.xml",
+  "version_name": "aString"
+}
